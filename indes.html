@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>REST Countries API</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="shortcut icon" href="./imgs/favicon-32x32.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    </head>
+    <body>
+        <header class="header">
+            <div class="header__container">
+                <h1 class="header__title">Where in the word?</h1>
+                <div class="header__themeSwitcher" id="theme-switcher" tabindex="0">
+                    <i class="fa-solid fa-moon"></i>
+                    <p class="header__themeTxt">Dark Mode</p>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <div class="main__header">
+                    <div class="main__countrySearch">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" name="Country" class="main__countryField" id="country-name" placeholder="Search for a country...">
+                    </div>
+                    <div class="main__filterRegion" id="filter-by-region" tabindex="0">
+                        <p class="main__filterRegion__txt">Filter by Region</p>
+                        <i class="fa-solid fa-angle-down"></i>
+                        <ul class="main__filterRegion__filterOptions hidden" id="filter-region-options">
+                            <li>All</li>
+                            <li data-name="Africa">Africa</li>
+                            <li data-name="Americas">America</li>
+                            <li data-name="Asia">Asia</li>
+                            <li data-name="Europe">Europe</li>
+                            <li data-name="Oceania">Oceania</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="main__content">
+                    
+                </div>
+
+                <div class="main__footer" id="navigation">
+                    <button class="main__footer__decrease" id="previous-bttn">Previous</button>
+                    <button class="main__footer__increase" id="next-bttn">Next</button>
+                </div>
+            </div>
+            
+            <div class="main__details">
+                <button class="main__details__button" id="back-bttn"><i class="fa-solid fa-arrow-left-long"></i> Back</button>
+                <div class="main__details__country">
+                    <div class="main__details__countryFlag"><img src="" alt=""></div>
+                    <div class="main__details__countryDetails">
+                        <h2 class="main__details__countryName"></h2>
+                        <div class="main__details__colGrp">
+                            <ul class="main__details__colOne">
+                                <li><strong>Native Name:</strong> <span id="spec-name"></span></li>
+                                <li><strong>Population:</strong> <span id="spec-population"></span></li>
+                                <li><strong>Region:</strong> <span id="spec-region"></span></li>
+                                <li><strong>Sub Region:</strong> <span id="spec-subRegion"></span></li>
+                                <li><strong>Capital:</strong> <span id="spec-capital"></span></li>
+                            </ul>
+                            <ul class="main__details__colSecond">
+                                <li><strong>Top Level Domain:</strong> <span id="spec-topLevelDomain"></span></li>
+                                <li><strong>Currencies:</strong> <span id="spec-currencies"></span></li>
+                                <li><strong>Languages:</strong> <span id="spec-lnguages"></span></li>
+                            </ul>
+                        </div>
+                        <div class="main__details__footer">
+                            <p class="main__details__footer__border">Border Countries:</p>
+                            <ul class="main__details__footer__borderCountries" id="border-grp"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="main.js"></script>
+    </body>
+</html>

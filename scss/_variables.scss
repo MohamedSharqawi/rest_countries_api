@@ -1,0 +1,27 @@
+@use "./mixins" as *;
+
+:root {
+    --element-color: hsl(209, 23%, 22%);
+    --background-color: hsl(207, 26%, 17%);
+    --text-color: hsl(0, 0%, 100%);
+    --max-width: 1250px;
+    --main-padding: 20px;
+    --global-shadow: 0 0 5px 1px hsla(0, 0%, 0%, 0.2);
+
+    &.light {
+        --element-color: hsl(0, 0%, 100%);
+        --background-color: hsl(0, 0%, 98%);
+        --text-color: hsl(200, 15%, 8%);
+    }
+    
+    @include breakpoint-down(500px) {
+    }
+}
+
+
+@font-face {
+    font-family: "Nunito";
+    src: url(./fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+}
+
+
